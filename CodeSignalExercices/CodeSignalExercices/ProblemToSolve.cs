@@ -16,29 +16,30 @@ namespace CodeSignalExercices
                 Output = [12, 123, 43, 67, 89] // output array
              */
             
-            for(int i = 0; i < input.Length; i++)
+            for(int i=0;i<input.Length;i++)
             {
-                for (int k = 0; k < input.Length-1; k++)
+                for(int j = 0; j < input.Length - 1; j++)
                 {
-                    string item1 = input[k].ToString();
-                    int weight1 = 0;
-                    for (int j = 0; j < item1.Length; j++)
+                    string strNumber1 = input[j].ToString();
+                    int weightNumber1 = 0;
+                    string strNumber2 = input[j+1].ToString();
+                    int weightNumber2 = 0;
+
+                    for(int k = 0; k < strNumber1.Length; k++)
                     {
-                        weight1 += Convert.ToInt32(item1.Substring(j, 1));
+                        weightNumber1+= Convert.ToInt32(strNumber1.Substring(k,1));
                     }
 
-                    int weight2 = 0;
-                    string item2 = input[k+1].ToString();
-                    for (int j = 0; j < item2.Length; j++)
+                    for (int k = 0; k < strNumber2.Length; k++)
                     {
-                        weight2 += Convert.ToInt32(item2.Substring(j, 1));
+                        weightNumber2 += Convert.ToInt32(strNumber2.Substring(k, 1));
                     }
 
-                    if (weight1 > weight2)
+                    if (weightNumber1 > weightNumber2)
                     {
-                        int temp = input[k];
-                        input[k] = input[k+1];
-                        input[k+1] = temp;
+                        int temp = input[j];
+                        input[j] = input[j + 1];
+                        input[j + 1] = temp;
                     }
                 }
             }

@@ -2,9 +2,11 @@
 using CodeSignalExercices;
 using CodeSignalExercices.DataStructures;
 using CodeSignalExercices.Digits;
+using CodeSignalExercices.Geometry;
+using CodeSignalExercices.Operations;
 
 #region Problem to solve
-//ProblemToSolve.Execute();
+ProblemToSolve.Execute();
 #endregion
 
 #region Array Replace
@@ -24,5 +26,21 @@ using CodeSignalExercices.Digits;
 #endregion
 
 #region Chess Board Cell Color
-ChessBoardCellColor.Execute();
+//ChessBoardCellColor.Execute();
+#endregion
+
+#region Circle Of Numbers
+//CircleOfNumbers.Execute();
+#endregion
+
+#region Deposit Profit
+//DepositProfit.Execute();
+#endregion
+
+#region Absolute Values Sum Minimization
+//AbsoluteValuesSumMinimization.Execute();
+#endregion
+
+#region Strings Rearrangement
+//StringsRearrangement.Execute();
 #endregion
