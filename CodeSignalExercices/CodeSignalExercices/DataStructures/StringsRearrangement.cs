@@ -37,7 +37,8 @@ namespace CodeSignalExercices.DataStructures
         static bool solution(string[] inputArray)
         {
             List<List<string>> result = new List<List<string>>();
-            int counter = 0;
+            bool isPossible = true;
+
             result = DoPermute(inputArray, 0, inputArray.Length - 1, result);
 
             foreach (List<string> s in result)
@@ -52,22 +53,30 @@ namespace CodeSignalExercices.DataStructures
                             tempCounter++;
                         }
                     }
-                    if (tempCounter > 1 || tempCounter == 0) counter++;
-                    else
+                    if (tempCounter > 1 || tempCounter == 0)
                     {
-                        if (s[i].Length % 2 == 0 && s.Count % 2 != 0) counter = 0;
+                        isPossible = false;
+                        break;
                     }
+                    else isPossible = true;
                 }
+
+                if (isPossible) break;
             }
 
-            if (counter > 1) return false;
-
-            return true;
+            return isPossible;
         }
 
         public static void Execute()
         {
-            string[] inputArray = new string[] { "aba", "bbb", "bab" };
+            string[] inputArray = new string[] { 
+                 "abc",
+                 "bef",
+                 "bcc",
+                 "bec",
+                 "bbc",
+                 "bdc" 
+            };
             Console.WriteLine(solution(inputArray));
         }
     }

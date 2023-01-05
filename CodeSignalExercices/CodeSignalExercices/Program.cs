@@ -6,7 +6,7 @@ using CodeSignalExercices.Geometry;
 using CodeSignalExercices.Operations;
 
 #region Problem to solve
-ProblemToSolve.Execute();
+//ProblemToSolve.Execute();
 #endregion
 
 #region Array Replace
@@ -43,4 +43,20 @@ ProblemToSolve.Execute();
 
 #region Strings Rearrangement
 //StringsRearrangement.Execute();
+#endregion
+
+#region Extract Each Kth
+//ExtractEachKth.Execute();
+#endregion
+
+#region First Digit
+//FirstDigit.Execute();
+#endregion
+
+#region Different Symbols Naive
+//DifferentSymbolsNaive.Execute();
+#endregion
+
+#region Array Max Consecutive Sum
+ArrayMaxConsecutiveSum.Execute();
 #endregion
